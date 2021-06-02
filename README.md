@@ -1,5 +1,6 @@
 # Music Modeling and Music Generation with Deep Learning.
-### Dr. Tristan Behrens, [LinkedIn](https://www.linkedin.com/in/dr-tristan-behrens-ai-guru-734967a2/), March 10th 2021.
+
+### Dr. Tristan Behrens, [LinkedIn](https://www.linkedin.com/in/dr-tristan-behrens-734967a2/), June 2nd 2021.
 
 ## Music Modeling Timeline.
 
@@ -109,14 +110,67 @@ Finally, we build a web-based musical Turing test (www.bachbot.com) and evaluate
 > With the advent of von Neumann-style computers, widespread exploration of new methods of music composition became possible. For the first time, complex sequences of carefully specified symbolic operations could be performed in a rapid fashion. Composers could develop algorithms embodying the compositional rules they were interested in and then use a computer to carry out these algorithms. In this way, composers could soon tell whether the results of their rules held artistic merit. This approach to algorithmic composition, based on the wedding between von Neumann computing machinery and rule-based software systems, has been prevalent for the past thirty years. The arrival of a new paradigm for computing has made a different approach to algorithmic composition possible. This new computing paradigm is called parallel distributed processing (PDP), also known as connectionism. Computation is performed by a collection of several simple processing units connected in a network and acting in cooperation (Rumelhart and McClelland 1986). This is in stark contrast to the single powerful central processor used in the von Neumann architecture. One of the major features of the PDP approach is that it replaces strict rule-following behavior with regularity-learning and generalization (Dolson 1989). This fundamental shift allows the development of new algorithmic composition methods that rely on learning the structure of existing musical examples and generalizing from these learned structures to compose new pieces. These methods contrast greatly with the majority of older schemes that simply follow a previously assembled set of compositional rules, resulting in brittle systems typically unable to appropriately handle unexpected musical situations. To be sure, other algorithmic composition methods in the past have been based on abstracting certain features from musical examples and using these to create new compositions. Techniques such as Markov modeling with transition probability analysis (Jones 1981), Mathews' melody interpolation method (Mathews and Rosler 1968), and Cope's EMI system (Cope 1987) can all be placed in this category. However, the PDP computational paradigm provides a single powerful unifying approach within which to formulate a variety of algorithmic composition methods of this type. These new learning methods combine many of the features of the techniques listed above and add a variety of new capabilities. Perhaps most importantly, though, they yield different and interesting musical results. This paper presents a particular type of PDP network for music composition applications. Various issues are discussed in designing the network, choosing the music representation used, training the network, and using it for composition. Comparisons are made to previous methods of algorithmic composition, and examples of the network's output are presented. This paper is intended to provide an indication of the power and range of PDP methods for algorithmic composition and to encourage others to begin exploring this new approach. Hence, rather than merely presenting a reduced compositional technique, alternative approaches and tangential ideas are included throughout as points of departure for further efforts. 
 
 
-# Other inspiring works
+## Other inspiring works
 
-## Timeline.
+### Timeline.
 
 - 2017 August, [Learning Musical relations using Gated Autoencoders](https://www.researchgate.net/publication/319164125_Learning_Musical_Relations_using_Gated_Autoencoders). Stefan Lattner, Maarten Grachten, Gerhard Widmer.
 
-## Abstracts Collection.
+### Abstracts Collection.
 
-### Learning Musical relations using Gated Autoencoders.
+#### Learning Musical relations using Gated Autoencoders.
 
 > Music is usually highly structured and it is still an open question how to design models which can successfully learn to recognize and represent musical structure. A fundamental problem is that structurally related patterns can have very distinct appearances, because the structural relationships are often based on transformations of musical material, like chromatic or diatonic transposition, inversion, retrograde, or rhythm change. In this preliminary work, we study the potential of two unsupervised learning techniques - Restricted Boltzmann Machines (RBMs) and Gated Autoencoders (GAEs) - to capture pre-defined transformations from constructed data pairs. We evaluate the models by using the learned representations as inputs in a discriminative task where for a given type of transformation (e.g. diatonic transposition), the specific relation between two musical patterns must be recognized (e.g. an upward transposition of diatonic steps). Furthermore, we measure the reconstruction error of models when reconstructing musical transformed patterns. Lastly, we test the models in an analogy-making task. We find that it is difficult to learn musical transformations with the RBM and that the GAE is much more adequate for this task, since it is able to learn representations of specific transformations that are largely content-invariant. We believe these results show that models such as GAEs may provide the basis for more encompassing music analysis systems, by endowing them with a better understanding of the structures underlying music.
+
+## Datasets.
+
+### The Lakh MIDI Dataset v0.1.
+
+- [Paper](https://www.colinraffel.com/publications/thesis.pdf)
+- [Download](https://colinraffel.com/projects/lmd/)
+
+> The Lakh MIDI dataset is a collection of 176,581 unique MIDI files, 45,129 of which have been matched and aligned to entries in the Million Song Dataset. Its goal is to facilitate large-scale music information retrieval, both symbolic (using the MIDI files alone) and audio content-based (using information extracted from the MIDI files as annotations for the matched audio files).
+
+### JSB Chorales.
+
+- [Paper](https://arxiv.org/abs/1206.6392)
+- [Download](http://www-etud.iro.umontreal.ca/~boulanni/icml2012)
+- [Download](https://github.com/czhuang/JSB-Chorales-dataset)
+
+### JS Fake Chorales.
+
+- [Download](https://github.com/omarperacha/js-fakes)
+
+> A MIDI dataset of 500 4-part chorales generated by the KS_Chorus algorithm, annotated with results from hundreds of listening test participants.
+
+### The MAESTRO Dataset.
+
+- [Paper](https://arxiv.org/abs/1810.12247)
+- [Download](https://magenta.tensorflow.org/datasets/maestro)
+
+> MAESTRO (MIDI and Audio Edited for Synchronous TRacks and Organization) is a dataset composed of about 200 hours of virtuosic piano performances captured with fine alignment (~3 ms) between note labels and audio waveforms.
+
+### CrestMuse.
+
+- [Paper](https://www.researchgate.net/publication/200806170_A_New_Music_Database_Describing_Deviation_Information_of_Performance_Expressions)
+- [Download](http://www.crestmuse.jp/pedb/)
+
+### RWC Music Database.
+
+- [Paper](https://www.researchgate.net/publication/220723431_RWC_Music_Database_Popular_Classical_and_Jazz_Music_Databases)
+- [Download](https://staff.aist.go.jp/m.goto/RWC-MDB/)
+
+### Nottingham Database.
+
+- [Download](https://ifdo.ca/~seymour/nottingham/nottingham.html)
+- [Download](https://github.com/jukedeck/nottingham-dataset)
+- [Download](http://abc.sourceforge.net/NMD/)
+
+> This is a collection of 1200 British and American folk tunes, (hornpipe, jigs, and etc.) that was created by Eric Foxley and posted on Eric Foxley's Music Database.
+
+### POP909.
+
+- [Paper](https://arxiv.org/abs/2008.07142)
+- [Download](https://github.com/music-x-lab/POP909-Dataset)
+
+> Music arrangement generation is a subtask of automatic music generation, which involves reconstructing and re-conceptualizing a piece with new compositional techniques. Such a generation process inevitably requires reference from the original melody, chord progression, or other structural information. Despite some promising models for arrangement, they lack more refined data to achieve better evaluations and more practical results. In this paper, we propose POP909, a dataset which contains multiple versions of the piano arrangements of 909 popular songs created by professional musicians. The main body of the dataset contains the vocal melody, the lead instrument melody, and the piano accompaniment for each song in MIDI format, which are aligned to the original audio files. Furthermore, we provide the annotations of tempo, beat, key, and chords, where the tempo curves are hand-labeled and others are done by MIR algorithms. Finally, we conduct several baseline experiments with this dataset using standard deep music generation algorithms. 
