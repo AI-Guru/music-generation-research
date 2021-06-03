@@ -4,7 +4,9 @@
 
 ## Music Modeling Timeline.
 
+- 2020 August, [Learning Interpretable Representation for Controllable Polyphonic Music Generation](https://arxiv.org/abs/2008.07122).
 - 2020 August, [MMM : Exploring Conditional Multi-Track Music Generation with the Transformer](https://arxiv.org/abs/2008.06048).
+- 2020 July, [Transformer-XL Based Music Generation with Multiple Sequences of Time-valued Notes](https://arxiv.org/abs/2007.07244).
 - 2020 May, [Transformer VAE: A Hierarchical Model for Structure-Aware and Interpretable Music Representation Learning](https://ieeexplore.ieee.org/document/9054554).
 - 2019 November, TonicNet, [Improving Polyphonic Music Models with Feature-Rich Encoding](https://arxiv.org/abs/1911.11775). Omar Peracha.
 - 2019 July, [LakhNES: Improving multi-instrumental music generation with cross-domain pre-training](https://arxiv.org/abs/1907.04868). Chris Donahue et alia.
@@ -28,9 +30,19 @@
 
 ## Abstracts Collection.
 
+### Learning Interpretable Representation for Controllable Polyphonic Music Generation
+
+> While deep generative models have become the leading methods for algorithmic composition, it remains a challenging problem to control the generation process because the latent variables of most deep-learning models lack good interpretability. Inspired by the content-style disentanglement idea, we design a novel architecture, under the VAE framework, that effectively learns two interpretable latent factors of polyphonic music: chord and texture. The current model focuses on learning 8-beat long piano composition segments. We show that such chord-texture disentanglement provides a controllable generation pathway leading to a wide spectrum of applications, including compositional style transfer, texture variation, and accompaniment arrangement. Both objective and subjective evaluations show that our method achieves a successful disentanglement and high quality controlled music generation. 
+
+
 ### MMM : Exploring Conditional Multi-Track Music Generation with the Transformer.
 
 > We propose the Multi-Track Music Machine (MMM), a generative system based on the Transformer architecture that is capable of generating multi-track music. In contrast to previous work, which represents musical material as a single time-ordered sequence, where the musical events corresponding to different tracks are interleaved, we create a time-ordered sequence of musical events for each track and concatenate several tracks into a single sequence. This takes advantage of the Transformer's attention-mechanism, which can adeptly handle long-term dependencies. We explore how various representations can offer the user a high degree of control at generation time, providing an interactive demo that accommodates track-level and bar-level inpainting, and offers control over track instrumentation and note density. 
+
+
+### Transformer-XL Based Music Generation with Multiple Sequences of Time-valued Notes.
+
+> Current state-of-the-art AI based classical music creation algorithms such as Music Transformer are trained by employing single sequence of notes with time-shifts. The major drawback of absolute time interval expression is the difficulty of similarity computing of notes that share the same note value yet different tempos, in one or among MIDI files. In addition, the usage of single sequence restricts the model to separately and effectively learn music information such as harmony and rhythm. In this paper, we propose a framework with two novel methods to respectively track these two shortages, one is the construction of time-valued note sequences that liberate note values from tempos and the other is the separated usage of four sequences, namely, former note on to current note on, note on to note off, pitch, and velocity, for jointly training of four Transformer-XL networks. Through training on a 23-hour piano MIDI dataset, our framework generates significantly better and hour-level longer music than three state-of-the-art baselines, namely Music Transformer, DeepJ, and single sequence-based Transformer-XL, evaluated automatically and manually. 
 
 ### Transformer VAE: A Hierarchical Model for Structure-Aware and Interpretable Music Representation Learning.
 
