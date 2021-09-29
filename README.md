@@ -4,6 +4,8 @@
 
 ## Music Modeling Timeline.
 
+- 2021 July, [MidiBERT-Piano: Large-scale Pre-training for Symbolic Music Understanding](https://arxiv.org/abs/2107.05223).
+- 2021 June, [MusicBERT: Symbolic Music Understanding with Large-Scale Pre-Training](https://arxiv.org/abs/2106.05630).
 - 2020 August, [Learning Interpretable Representation for Controllable Polyphonic Music Generation](https://arxiv.org/abs/2008.07122).
 - 2020 August, [MMM : Exploring Conditional Multi-Track Music Generation with the Transformer](https://arxiv.org/abs/2008.06048).
 - 2020 July, [Transformer-XL Based Music Generation with Multiple Sequences of Time-valued Notes](https://arxiv.org/abs/2007.07244).
@@ -29,6 +31,14 @@
 - 1959, [Experimental Music: Composition with an Electronic Computer](https://archive.org/details/experimentalmusi00hill/). Lejaren Hiller.
 
 ## Abstracts Collection.
+
+### MidiBERT-Piano: Large-scale Pre-training for Symbolic Music Understanding.
+
+> This paper presents an attempt to employ the mask language modeling approach of BERT to pre-train a 12-layer Transformer model over 4,166 pieces of polyphonic piano MIDI files for tackling a number of symbolic-domain discriminative music understanding tasks. These include two note-level classification tasks, i.e., melody extraction and velocity prediction, as well as two sequence-level classification tasks, i.e., composer classification and emotion classification. We find that, given a pre-trained Transformer, our models outperform recurrent neural network based baselines with less than 10 epochs of fine-tuning. Ablation studies show that the pre-training remains effective even if none of the MIDI data of the downstream tasks are seen at the pre-training stage, and that freezing the self-attention layers of the Transformer at the fine-tuning stage slightly degrades performance. All the five datasets employed in this work are publicly available, as well as checkpoints of our pre-trained and fine-tuned models. As such, our research can be taken as a benchmark for symbolic-domain music understanding. 
+
+### MusicBERT: Symbolic Music Understanding with Large-Scale Pre-Training.
+
+> Symbolic music understanding, which refers to the understanding of music from the symbolic data (e.g., MIDI format, but not audio), covers many music applications such as genre classification, emotion classification, and music pieces matching. While good music representations are beneficial for these applications, the lack of training data hinders representation learning. Inspired by the success of pre-training models in natural language processing, in this paper, we develop MusicBERT, a large-scale pre-trained model for music understanding. To this end, we construct a large-scale symbolic music corpus that contains more than 1 million music songs. Since symbolic music contains more structural (e.g., bar, position) and diverse information (e.g., tempo, instrument, and pitch), simply adopting the pre-training techniques from NLP to symbolic music only brings marginal gains. Therefore, we design several mechanisms, including OctupleMIDI encoding and bar-level masking strategy, to enhance pre-training with symbolic music data. Experiments demonstrate the advantages of MusicBERT on four music understanding tasks, including melody completion, accompaniment suggestion, genre classification, and style classification. Ablation studies also verify the effectiveness of our designs of OctupleMIDI encoding and bar-level masking strategy in MusicBERT. 
 
 ### Learning Interpretable Representation for Controllable Polyphonic Music Generation
 
