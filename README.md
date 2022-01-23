@@ -196,3 +196,10 @@ Finally, we build a web-based musical Turing test (www.bachbot.com) and evaluate
 - [Download](https://github.com/music-x-lab/POP909-Dataset)
 
 > Music arrangement generation is a subtask of automatic music generation, which involves reconstructing and re-conceptualizing a piece with new compositional techniques. Such a generation process inevitably requires reference from the original melody, chord progression, or other structural information. Despite some promising models for arrangement, they lack more refined data to achieve better evaluations and more practical results. In this paper, we propose POP909, a dataset which contains multiple versions of the piano arrangements of 909 popular songs created by professional musicians. The main body of the dataset contains the vocal melody, the lead instrument melody, and the piano accompaniment for each song in MIDI format, which are aligned to the original audio files. Furthermore, we provide the annotations of tempo, beat, key, and chords, where the tempo curves are hand-labeled and others are done by MIR algorithms. Finally, we conduct several baseline experiments with this dataset using standard deep music generation algorithms. 
+
+### DadaGP
+
+- [Paper](https://archives.ismir.net/ismir2021/paper/000076.pdf)
+- [Download](https://github.com/dada-bots/dadaGP)
+
+> A collection of 26,181 GuitarPro songs in 739 genres, converted to a token sequence format for generative language models like GPT2, TransformerXL, etc.
