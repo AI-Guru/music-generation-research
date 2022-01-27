@@ -1,21 +1,39 @@
 # Music Modeling and Music Generation with Deep Learning.
 
-### Dr. Tristan Behrens, [LinkedIn](https://www.linkedin.com/in/dr-tristan-behrens-734967a2/), June 2nd 2021.
+### Dr. Tristan Behrens, [LinkedIn](https://www.linkedin.com/in/dr-tristan-behrens-734967a2/), January 27th 2022.
+
+### What is new in this version?
+
+Papers:
+
+- Theme Transformer: Symbolic Music Generation with Theme-Conditioned Transformer
+- Jukebox: A Generative Model for Music
+- Learning a Latent Space of Multitrack Measures
+- BachProp: Learning to Compose Music in Multiple Styles
+
+Datasets:
+
+- DadaGP
+- js-fakes-4bars
 
 ## Music Modeling Timeline.
 
+- 2021 November, [Theme Transformer: Symbolic Music Generation with Theme-Conditioned Transformer](https://arxiv.org/abs/2111.04093).
 - 2021 July, [MidiBERT-Piano: Large-scale Pre-training for Symbolic Music Understanding](https://arxiv.org/abs/2107.05223).
 - 2021 June, [MusicBERT: Symbolic Music Understanding with Large-Scale Pre-Training](https://arxiv.org/abs/2106.05630).
 - 2020 August, [Learning Interpretable Representation for Controllable Polyphonic Music Generation](https://arxiv.org/abs/2008.07122).
 - 2020 August, [MMM : Exploring Conditional Multi-Track Music Generation with the Transformer](https://arxiv.org/abs/2008.06048).
 - 2020 July, [Transformer-XL Based Music Generation with Multiple Sequences of Time-valued Notes](https://arxiv.org/abs/2007.07244).
 - 2020 May, [Transformer VAE: A Hierarchical Model for Structure-Aware and Interpretable Music Representation Learning](https://ieeexplore.ieee.org/document/9054554).
+- 2020 April, [Jukebox: A Generative Model for Music](https://arxiv.org/abs/2005.00341)
 - 2019 November, TonicNet, [Improving Polyphonic Music Models with Feature-Rich Encoding](https://arxiv.org/abs/1911.11775). Omar Peracha.
 - 2019 July, [LakhNES: Improving multi-instrumental music generation with cross-domain pre-training](https://arxiv.org/abs/1907.04868). Chris Donahue et alia.
 - 2019 July, [R-Transformer: Recurrent Neural Network Enhanced Transformer](https://arxiv.org/abs/1907.05572).
 - 2019 April, [MuseNet](https://openai.com/blog/musenet/). OpenAI.
 - 2019 March, [Counterpoint by Convolution](https://arxiv.org/abs/1903.07227)
 - 2018 September, [Music Transformer](https://arxiv.org/abs/1809.04281).
+- 2018 June, [Learning a Latent Space of Multitrack Measures](https://arxiv.org/abs/1806.00195)
+- 2018 February, [BachProp: Learning to Compose Music in Multiple Styles](https://arxiv.org/abs/1802.05162).
 - 2017 October, [Polyphonic Music Generation with Sequence Generative Adversarial Networks](https://arxiv.org/abs/1710.11418)
 - 2017 October, [Automatic Stylistic Composition of Bach Chorales with Deep LSTM](https://www.microsoft.com/en-us/research/publication/automatic-stylistic-composition-of-bach-chorales-with-deep-lstm/)
 - 2017 May, [Objective-Reinforced Generative Adversarial Networks (ORGAN) for Sequence Generation Models](https://arxiv.org/abs/1705.10843)
@@ -58,6 +76,10 @@
 
 > Structure awareness and interpretability are two of the most desired properties of music generation algorithms. Structure-aware models generate more natural and coherent music with long-term dependencies, while interpretable models are more friendly for human-computer interaction and co-creation. To achieve these two goals simultaneously, we designed the Transformer Variational AutoEncoder, a hierarchical model that unifies the efforts of two recent breakthroughs in deep music generation: 1) the Music Transformer and 2) Deep Music Analogy. The former learns long-term dependencies using attention mechanism, and the latter learns interpretable latent representations using a disentangled conditional-VAE. We showed that Transformer VAE is essentially capable of learning a context-sensitive hierarchical representation, regarding local representations as the context and the dependencies among the local representations as the global structure. By interacting with the model, we can achieve context transfer, realizing the imaginary situation of "what if" a piece is developed following the music flow of another piece.
 
+### Jukebox: A Generative Model for Music.
+
+> We introduce Jukebox, a model that generates music with singing in the raw audio domain. We tackle the long context of raw audio using a multi-scale VQ-VAE to compress it to discrete codes, and modeling those using autoregressive Transformers. We show that the combined model at scale can generate high-fidelity and diverse songs with coherence up to multiple minutes. We can condition on artist and genre to steer the musical and vocal style, and on unaligned lyrics to make the singing more controllable. We are releasing thousands of non cherry-picked samples, along with model weights and code.
+
 ### Improving Polyphonic Music Models with Feature-Rich Encoding.
 
 > This paper explores sequential modelling of polyphonic music with deep neural networks. While recent breakthroughs have focussed on network architecture, we demonstrate that the representation of the sequence can make an equally significant contribution to the performance of the model as measured by validation set loss. By extracting salient features inherent to the training dataset, the model can either be conditioned on these features or trained to predict said features as extra components of the sequences being modelled. We show that training a neural network to predict a seemingly more complex sequence, with extra features included in the series being modelled, can improve overall model performance significantly. We first introduce TonicNet, a GRU-based model trained to initially predict the chord at a given time-step before then predicting the notes of each voice at that time-step, in contrast with the typical approach of predicting only the notes. We then evaluate TonicNet on the canonical JSB Chorales dataset and obtain state-of-the-art results. 
@@ -77,6 +99,14 @@
 ### Music Transformer.
 
 > Music relies heavily on repetition to build structure and meaning. Self-reference occurs on multiple timescales, from motifs to phrases to reusing of entire sections of music, such as in pieces with ABA structure. The Transformer (Vaswani et al., 2017), a sequence model based on self-attention, has achieved compelling results in many generation tasks that require maintaining long-range coherence. This suggests that self-attention might also be well-suited to modeling music. In musical composition and performance, however, relative timing is critically important. Existing approaches for representing relative positional information in the Transformer modulate attention based on pairwise distance (Shaw et al., 2018). This is impractical for long sequences such as musical compositions since their memory complexity for intermediate relative information is quadratic in the sequence length. We propose an algorithm that reduces their intermediate memory requirement to linear in the sequence length. This enables us to demonstrate that a Transformer with our modified relative attention mechanism can generate minute-long compositions (thousands of steps, four times the length modeled in Oore et al., 2018) with compelling structure, generate continuations that coherently elaborate on a given motif, and in a seq2seq setup generate accompaniments conditioned on melodies. We evaluate the Transformer with our relative attention mechanism on two datasets, JSB Chorales and Piano-e-Competition, and obtain state-of-the-art results on the latter. 
+
+### Learning a Latent Space of Multitrack Measures.
+
+> Discovering and exploring the underlying structure of multi-instrumental music using learning-based approaches remains an open problem. We extend the recent MusicVAE model to represent multitrack polyphonic measures as vectors in a latent space. Our approach enables several useful operations such as generating plausible measures from scratch, interpolating between measures in a musically meaningful way, and manipulating specific musical attributes. We also introduce chord conditioning, which allows all of these operations to be performed while keeping harmony fixed, and allows chords to be changed while maintaining musical "style". By generating a sequence of measures over a predefined chord progression, our model can produce music with convincing long-term structure. We demonstrate that our latent space model makes it possible to intuitively control and generate musical sequences with rich instrumentation (see this https URL for generated audio). 
+
+### BachProp: Learning to Compose Music in Multiple Styles.
+
+> Hand in hand with deep learning advancements, algorithms of music composition increase in performance. However, most of the successful models are designed for specific musical structures. Here, we present BachProp, an algorithmic composer that can generate music scores in any style given sufficient training data. To adapt BachProp to a broad range of musical styles, we propose a novel normalized representation of music and train a deep network to predict the note transition probabilities of a given music corpus. In this paper, new music scores sampled by BachProp are compared with the original corpora via crowdsourcing. This evaluation indicates that the music scores generated by BachProp are not less preferred than the original music corpus the algorithm was provided with. 
 
 ### Polyphonic Music Generation with Sequence Generative Adversarial Networks.
 
@@ -196,3 +226,16 @@ Finally, we build a web-based musical Turing test (www.bachbot.com) and evaluate
 - [Download](https://github.com/music-x-lab/POP909-Dataset)
 
 > Music arrangement generation is a subtask of automatic music generation, which involves reconstructing and re-conceptualizing a piece with new compositional techniques. Such a generation process inevitably requires reference from the original melody, chord progression, or other structural information. Despite some promising models for arrangement, they lack more refined data to achieve better evaluations and more practical results. In this paper, we propose POP909, a dataset which contains multiple versions of the piano arrangements of 909 popular songs created by professional musicians. The main body of the dataset contains the vocal melody, the lead instrument melody, and the piano accompaniment for each song in MIDI format, which are aligned to the original audio files. Furthermore, we provide the annotations of tempo, beat, key, and chords, where the tempo curves are hand-labeled and others are done by MIR algorithms. Finally, we conduct several baseline experiments with this dataset using standard deep music generation algorithms. 
+
+### DadaGP.
+
+- [Paper](https://archives.ismir.net/ismir2021/paper/000076.pdf)
+- [Download](https://github.com/dada-bots/dadaGP)
+
+> DadaGP is a dataset of 26,181 GuitarPro songs in 739 genres, converted to a token sequence format suitable for generative language models like GPT2, TransformerXL, etc.
+
+### js-fakes-4bars.
+
+- [Download](https://huggingface.co/datasets/TristanBehrens/js-fakes-4bars)
+
+> This is a tokenized version of the JS-Fakes dataset by Omar Peracha. The representation is four tracks with four bars per track.
