@@ -1,6 +1,6 @@
 # Music Modeling and Music Generation with Deep Learning.
 
-### Dr. Tristan Behrens, [LinkedIn](https://www.linkedin.com/in/dr-tristan-behrens-734967a2/), January 27th 2022.
+### Dr. Tristan Behrens, [LinkedIn](https://www.linkedin.com/in/dr-tristan-behrens-734967a2/), March 7th 2022.
 
 ### What is new in this version?
 
