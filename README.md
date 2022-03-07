@@ -4,17 +4,13 @@
 
 ### What is new in this version?
 
-Papers:
-
-- Theme Transformer: Symbolic Music Generation with Theme-Conditioned Transformer
-- Jukebox: A Generative Model for Music
-- Learning a Latent Space of Multitrack Measures
-- BachProp: Learning to Compose Music in Multiple Styles
+Papers: -
 
 Datasets:
 
-- DadaGP
+- MetaMIDI Dataset
 - js-fakes-4bars
+- GiantMIDI-Piano
 
 ## Music Modeling Timeline.
 
@@ -239,3 +235,16 @@ Finally, we build a web-based musical Turing test (www.bachbot.com) and evaluate
 - [Download](https://huggingface.co/datasets/TristanBehrens/js-fakes-4bars)
 
 > This is a tokenized version of the JS-Fakes dataset by Omar Peracha. The representation is four tracks with four bars per track.
+
+### MetaMIDI Dataset.
+
+- [Download](https://metacreation.net/metamidi-dataset/)
+- [GitHub](https://github.com/jeffreyjohnens/MetaMIDIDataset)
+
+> We introduce the MetaMIDI Dataset (MMD), a large scale collection of 436,631 MIDI files and metadata. In addition to the MIDI files, we provide artist, title and genre metadata that was collected during the scraping process when available.
+
+### GiantMIDI-Piano.
+
+- [GitHub](https://github.com/bytedance/GiantMIDI-Piano)
+
+> GiantMIDI-Piano is a classical piano MIDI dataset contains 10,855 MIDI files of 2,786 composers. The curated subset by constraining composer surnames contains 7,236 MIDI files of 1,787 composers. GiantMIDI-Piano are transcribed from live recordings with a high-resolution piano transcription system.
