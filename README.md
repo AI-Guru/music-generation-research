@@ -9,7 +9,6 @@ Papers: -
 Datasets:
 
 - MetaMIDI Dataset
-- js-fakes-4bars
 - GiantMIDI-Piano
 
 ## Music Modeling Timeline.
