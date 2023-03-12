@@ -1,18 +1,23 @@
 # Music Modeling and Music Generation with Deep Learning.
 
-### Dr. Tristan Behrens, [LinkedIn](https://www.linkedin.com/in/dr-tristan-behrens-734967a2/), June 28th 2022.
+### Dr. Tristan Behrens, [LinkedIn](https://www.linkedin.com/in/dr-tristan-behrens-734967a2/), March 12th 2023.
 
 ### What is new in this version?
 
 Papers: 
 
-- Symphony Generation with Permutation Invariant Language Model
-- Symbolic Music Generation with Diffusion Models
+- Added: AudioLM: a Language Modeling Approach to Audio Generation.
+- Added: MusicLM: Generating Music From Text
+
+- Added: ERNIE-Music: Text-to-Waveform Music Generation with Diffusion Models
 
 Datasets: -
 
 ## Music Modeling Timeline.
 
+- 2023 February [ERNIE-Music: Text-to-Waveform Music Generation with Diffusion Models](https://arxiv.org/abs/2302.04456)
+- 2023 January [MusicLM: Generating Music From Text](https://arxiv.org/abs/2301.11325)
+- 2022 September, [AudioLM: a Language Modeling Approach to Audio Generation](https://arxiv.org/abs/2209.03143)
 - 2022 May, [Symphony Generation with Permutation Invariant Language Model](https://arxiv.org/abs/2205.05448).
 - 2021 November, [Theme Transformer: Symbolic Music Generation with Theme-Conditioned Transformer](https://arxiv.org/abs/2111.04093).
 - 2021 July, [MidiBERT-Piano: Large-scale Pre-training for Symbolic Music Understanding](https://arxiv.org/abs/2107.05223).
@@ -46,6 +51,18 @@ Datasets: -
 - 1959, [Experimental Music: Composition with an Electronic Computer](https://archive.org/details/experimentalmusi00hill/). Lejaren Hiller.
 
 ## Abstracts Collection.
+
+### ERNIE-Music: Text-to-Waveform Music Generation with Diffusion Models
+
+> In recent years, there has been an increased popularity in image and speech generation using diffusion models. However, directly generating music waveforms from free-form text prompts is still under-explored. In this paper, we propose the first text-to-waveform music generation model that can receive arbitrary texts using diffusion models. We incorporate the free-form textual prompt as the condition to guide the waveform generation process of diffusion models. To solve the problem of lacking such text-music parallel data, we collect a dataset of text-music pairs from the Internet with weak supervision. Besides, we compare the effect of two prompt formats of conditioning texts (music tags and free-form texts) and prove the superior performance of our method in terms of text-music relevance. We further demonstrate that our generated music in the waveform domain outperforms previous works by a large margin in terms of diversity, quality, and text-music relevance. 
+
+### MusicLM: Generating Music From Text
+
+> We introduce MusicLM, a model generating high-fidelity music from text descriptions such as "a calming violin melody backed by a distorted guitar riff". MusicLM casts the process of conditional music generation as a hierarchical sequence-to-sequence modeling task, and it generates music at 24 kHz that remains consistent over several minutes. Our experiments show that MusicLM outperforms previous systems both in audio quality and adherence to the text description. Moreover, we demonstrate that MusicLM can be conditioned on both text and a melody in that it can transform whistled and hummed melodies according to the style described in a text caption. To support future research, we publicly release MusicCaps, a dataset composed of 5.5k music-text pairs, with rich text descriptions provided by human experts.
+
+### AudioLM: a Language Modeling Approach to Audio Generation
+
+> We introduce AudioLM, a framework for high-quality audio generation with long-term consistency. AudioLM maps the input audio to a sequence of discrete tokens and casts audio generation as a language modeling task in this representation space. We show how existing audio tokenizers provide different trade-offs between reconstruction quality and long-term structure, and we propose a hybrid tokenization scheme to achieve both objectives. Namely, we leverage the discretized activations of a masked language model pre-trained on audio to capture long-term structure and the discrete codes produced by a neural audio codec to achieve high-quality synthesis. By training on large corpora of raw audio waveforms, AudioLM learns to generate natural and coherent continuations given short prompts. When trained on speech, and without any transcript or annotation, AudioLM generates syntactically and semantically plausible speech continuations while also maintaining speaker identity and prosody for unseen speakers. Furthermore, we demonstrate how our approach extends beyond speech by generating coherent piano music continuations, despite being trained without any symbolic representation of music.
 
 ### Symphony Generation with Permutation Invariant Language Model.
 
