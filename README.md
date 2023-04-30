@@ -1,24 +1,29 @@
 # Music Modeling and Music Generation with Deep Learning.
 
-### Dr. Tristan Behrens, [LinkedIn](https://www.linkedin.com/in/dr-tristan-behrens-734967a2/), March 12th 2023.
+### Dr. Tristan Behrens, [LinkedIn](https://www.linkedin.com/in/dr-tristan-behrens-734967a2/), April 30th 2023.
 
-### What is new in this version?
+## What is new in this version?
 
-Papers: 
+### Papers: 
 
-- Added: AudioLM: a Language Modeling Approach to Audio Generation.
-- Added: MusicLM: Generating Music From Text
+- Added: Moûsai: Text-to-Music Generation with Long-Context Latent Diffusion
+- Added: RAVE: A variational autoencoder for fast and high-quality neural audio synthesis
+- Added: Musika! Fast Infinite Waveform Music Generation
+- Added: WaveNet: A Generative Model for Raw Audio
 
-- Added: ERNIE-Music: Text-to-Waveform Music Generation with Diffusion Models
+### Datasets:
 
-Datasets: -
+-
 
 ## Music Modeling Timeline.
 
 - 2023 February [ERNIE-Music: Text-to-Waveform Music Generation with Diffusion Models](https://arxiv.org/abs/2302.04456)
+- 2023 January [Moûsai: Text-to-Music Generation with Long-Context Latent Diffusion](https://arxiv.org/abs/2301.11757)
 - 2023 January [MusicLM: Generating Music From Text](https://arxiv.org/abs/2301.11325)
 - 2022 September, [AudioLM: a Language Modeling Approach to Audio Generation](https://arxiv.org/abs/2209.03143)
+- 20233 August [Musika! Fast Infinite Waveform Music Generation](https://arxiv.org/abs/2208.08706)
 - 2022 May, [Symphony Generation with Permutation Invariant Language Model](https://arxiv.org/abs/2205.05448).
+- 2021 November, [RAVE: A variational autoencoder for fast and high-quality neural audio synthesis](https://arxiv.org/abs/2111.05011)
 - 2021 November, [Theme Transformer: Symbolic Music Generation with Theme-Conditioned Transformer](https://arxiv.org/abs/2111.04093).
 - 2021 July, [MidiBERT-Piano: Large-scale Pre-training for Symbolic Music Understanding](https://arxiv.org/abs/2107.05223).
 - 2021 June, [MusicBERT: Symbolic Music Understanding with Large-Scale Pre-Training](https://arxiv.org/abs/2106.05630).
@@ -43,6 +48,7 @@ Datasets: -
 - 2016 December, [DeepBach: a Steerable Model for Bach Chorales Generation](https://arxiv.org/abs/1612.01010).
 - 2016 December, [Generating Music by Fine-Tuning Recurrent Neural Networks with Reinforcement Learning](https://research.google/pubs/pub45871/)
 - 2016 November, [C-RNN-GAN: Continuous recurrent neural networks with adversarial training](https://arxiv.org/abs/1611.09904). Olof Mogren.
+- 2016 September, [WaveNet: A Generative Model for Raw Audio](https://arxiv.org/abs/1609.03499)
 - 2016 September, [SeqGAN: Sequence Generative Adversarial Nets with Policy Gradient](https://arxiv.org/abs/1609.05473)
 - 2016 August, [BachBot: Automatic composition in the style of Bach chorales](https://www.mlmi.eng.cam.ac.uk/files/feynman_liang_8224771_assignsubmission_file_liangfeynmanthesis.pdf). Feynman Liang.
 - 2002, [Finding Temporal Structure in Music: Blues Improvisation with LSTM Recurrent Networks](ftp://ftp.idsia.ch/pub/juergen/2002_ieee.pdf) Douglas Eck and Jürgen Schmidhuber.
@@ -56,6 +62,10 @@ Datasets: -
 
 > In recent years, there has been an increased popularity in image and speech generation using diffusion models. However, directly generating music waveforms from free-form text prompts is still under-explored. In this paper, we propose the first text-to-waveform music generation model that can receive arbitrary texts using diffusion models. We incorporate the free-form textual prompt as the condition to guide the waveform generation process of diffusion models. To solve the problem of lacking such text-music parallel data, we collect a dataset of text-music pairs from the Internet with weak supervision. Besides, we compare the effect of two prompt formats of conditioning texts (music tags and free-form texts) and prove the superior performance of our method in terms of text-music relevance. We further demonstrate that our generated music in the waveform domain outperforms previous works by a large margin in terms of diversity, quality, and text-music relevance. 
 
+### Moûsai: Text-to-Music Generation with Long-Context Latent Diffusion
+
+> The recent surge in popularity of diffusion models for image generation has brought new attention to the potential of these models in other areas of media synthesis. One area that has yet to be fully explored is the application of diffusion models to music generation. Music generation requires to handle multiple aspects, including the temporal dimension, long-term structure, multiple layers of overlapping sounds, and nuances that only trained listeners can detect. In our work, we investigate the potential of diffusion models for text-conditional music generation. We develop a cascading latent diffusion approach that can generate multiple minutes of high-quality stereo music at 48kHz from textual descriptions. For each model, we make an effort to maintain reasonable inference speed, targeting real-time on a single consumer GPU. In addition to trained models, we provide a collection of open-source libraries with the hope of facilitating future work in the field. 
+
 ### MusicLM: Generating Music From Text
 
 > We introduce MusicLM, a model generating high-fidelity music from text descriptions such as "a calming violin melody backed by a distorted guitar riff". MusicLM casts the process of conditional music generation as a hierarchical sequence-to-sequence modeling task, and it generates music at 24 kHz that remains consistent over several minutes. Our experiments show that MusicLM outperforms previous systems both in audio quality and adherence to the text description. Moreover, we demonstrate that MusicLM can be conditioned on both text and a melody in that it can transform whistled and hummed melodies according to the style described in a text caption. To support future research, we publicly release MusicCaps, a dataset composed of 5.5k music-text pairs, with rich text descriptions provided by human experts.
@@ -64,9 +74,17 @@ Datasets: -
 
 > We introduce AudioLM, a framework for high-quality audio generation with long-term consistency. AudioLM maps the input audio to a sequence of discrete tokens and casts audio generation as a language modeling task in this representation space. We show how existing audio tokenizers provide different trade-offs between reconstruction quality and long-term structure, and we propose a hybrid tokenization scheme to achieve both objectives. Namely, we leverage the discretized activations of a masked language model pre-trained on audio to capture long-term structure and the discrete codes produced by a neural audio codec to achieve high-quality synthesis. By training on large corpora of raw audio waveforms, AudioLM learns to generate natural and coherent continuations given short prompts. When trained on speech, and without any transcript or annotation, AudioLM generates syntactically and semantically plausible speech continuations while also maintaining speaker identity and prosody for unseen speakers. Furthermore, we demonstrate how our approach extends beyond speech by generating coherent piano music continuations, despite being trained without any symbolic representation of music.
 
+### Musika! Fast Infinite Waveform Music Generation
+
+> Fast and user-controllable music generation could enable novel ways of composing or performing music. However, state-of-the-art music generation systems require large amounts of data and computational resources for training, and are slow at inference. This makes them impractical for real-time interactive use. In this work, we introduce Musika, a music generation system that can be trained on hundreds of hours of music using a single consumer GPU, and that allows for much faster than real-time generation of music of arbitrary length on a consumer CPU. We achieve this by first learning a compact invertible representation of spectrogram magnitudes and phases with adversarial autoencoders, then training a Generative Adversarial Network (GAN) on this representation for a particular music domain. A latent coordinate system enables generating arbitrarily long sequences of excerpts in parallel, while a global context vector allows the music to remain stylistically coherent through time. We perform quantitative evaluations to assess the quality of the generated samples and showcase options for user control in piano and techno music generation. We release the source code and pretrained autoencoder weights at this http URL, such that a GAN can be trained on a new music domain with a single GPU in a matter of hours. 
+
 ### Symphony Generation with Permutation Invariant Language Model.
 
 > In this work, we present a symbolic symphony music generation solution, SymphonyNet, based on a permutation invariant language model. To bridge the gap between text generation and symphony generation task, we propose a novel Multi-track Multi-instrument Repeatable (MMR) representation with particular 3-D positional embedding and a modified Byte Pair Encoding algorithm (Music BPE) for music tokens. A novel linear transformer decoder architecture is introduced as a backbone for modeling extra-long sequences of symphony tokens. Meanwhile, we train the decoder to learn automatic orchestration as a joint task by masking instrument information from the input. We also introduce a large-scale symbolic symphony dataset for the advance of symphony generation research. Our empirical results show that our proposed approach can generate coherent, novel, complex and harmonious symphony compared to human composition, which is the pioneer solution for multi-track multi-instrument symbolic music generation. 
+
+### RAVE: A variational autoencoder for fast and high-quality neural audio synthesis
+
+> Deep generative models applied to audio have improved by a large margin the state-of-the-art in many speech and music related tasks. However, as raw waveform modelling remains an inherently difficult task, audio generative models are either computationally intensive, rely on low sampling rates, are complicated to control or restrict the nature of possible signals. Among those models, Variational AutoEncoders (VAE) give control over the generation by exposing latent variables, although they usually suffer from low synthesis quality. In this paper, we introduce a Realtime Audio Variational autoEncoder (RAVE) allowing both fast and high-quality audio waveform synthesis. We introduce a novel two-stage training procedure, namely representation learning and adversarial fine-tuning. We show that using a post-training analysis of the latent space allows a direct control between the reconstruction fidelity and the representation compactness. By leveraging a multi-band decomposition of the raw waveform, we show that our model is the first able to generate 48kHz audio signals, while simultaneously running 20 times faster than real-time on a standard laptop CPU. We evaluate synthesis quality using both quantitative and qualitative subjective experiments and show the superiority of our approach compared to existing models. Finally, we present applications of our model for timbre transfer and signal compression. All of our source code and audio examples are publicly available. 
 
 ### Theme Transformer: Symbolic Music Generation with Theme-Conditioned Transformer.
 
@@ -162,6 +180,10 @@ Datasets: -
 ### C-RNN-GAN: Continuous recurrent neural networks with adversarial training.
 
 > Generative adversarial networks have been proposed as a way of efficiently training deep generative neural networks. We propose a generative adversarial model that works on continuous sequential data, and apply it by training it on a collection of classical music. We conclude that it generates music that sounds better and better as the model is trained, report statistics on generated music, and let the reader judge the quality by downloading the generated songs. 
+
+### WaveNet: A Generative Model for Raw Audio
+
+> This paper introduces WaveNet, a deep neural network for generating raw audio waveforms. The model is fully probabilistic and autoregressive, with the predictive distribution for each audio sample conditioned on all previous ones; nonetheless we show that it can be efficiently trained on data with tens of thousands of samples per second of audio. When applied to text-to-speech, it yields state-of-the-art performance, with human listeners rating it as significantly more natural sounding than the best parametric and concatenative systems for both English and Mandarin. A single WaveNet can capture the characteristics of many different speakers with equal fidelity, and can switch between them by conditioning on the speaker identity. When trained to model music, we find that it generates novel and often highly realistic musical fragments. We also show that it can be employed as a discriminative model, returning promising results for phoneme recognition.
 
 ### SeqGAN: Sequence Generative Adversarial Nets with Policy Gradient.
 
