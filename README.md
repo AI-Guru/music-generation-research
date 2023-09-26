@@ -1,15 +1,15 @@
 # Music Modeling and Music Generation with Deep Learning.
 
-### Dr. Tristan Behrens, [LinkedIn](https://www.linkedin.com/in/dr-tristan-behrens-734967a2/), April 30th 2023.
+### Dr. Tristan Behrens, [LinkedIn](https://www.linkedin.com/in/dr-tristan-behrens-734967a2/), September 26th 2023.
 
 ## What is new in this version?
 
 ### Papers: 
 
-- Added: Moûsai: Text-to-Music Generation with Long-Context Latent Diffusion
-- Added: RAVE: A variational autoencoder for fast and high-quality neural audio synthesis
-- Added: Musika! Fast Infinite Waveform Music Generation
-- Added: WaveNet: A Generative Model for Raw Audio
+- Added: GTR-CTRL: Instrument and Genre Conditioning for Guitar-Focused Music Generation with Transformers
+- Added: Looper: LooperGP: A Loopable Sequence Model for Live Coding Performance using GuitarPro Tablature
+- Added: ProgGP: From GuitarPro Tablature Neural Generation To Progressive Metal Production
+- Added: ShredGP: Guitarist Style-Conditioned Tablature Generation
 
 ### Datasets:
 
@@ -17,6 +17,10 @@
 
 ## Music Modeling Timeline.
 
+- 2023 July: [ShredGP: Guitarist Style-Conditioned Tablature Generation](https://arxiv.org/abs/2307.05324)
+- 2023 July: [ProgGP: From GuitarPro Tablature Neural Generation To Progressive Metal Production](https://arxiv.org/abs/2307.05328)
+- 2023 March [LooperGP: A Loopable Sequence Model for Live Coding Performance using GuitarPro Tablature](https://arxiv.org/abs/2303.01665)
+- 2023 February [GTR-CTRL: Instrument and Genre Conditioning for Guitar-Focused Music Generation with Transformers](https://arxiv.org/abs/2302.05393)
 - 2023 February [ERNIE-Music: Text-to-Waveform Music Generation with Diffusion Models](https://arxiv.org/abs/2302.04456)
 - 2023 January [Moûsai: Text-to-Music Generation with Long-Context Latent Diffusion](https://arxiv.org/abs/2301.11757)
 - 2023 January [MusicLM: Generating Music From Text](https://arxiv.org/abs/2301.11325)
@@ -57,6 +61,22 @@
 - 1959, [Experimental Music: Composition with an Electronic Computer](https://archive.org/details/experimentalmusi00hill/). Lejaren Hiller.
 
 ## Abstracts Collection.
+
+### ShredGP: Guitarist Style-Conditioned Tablature Generation
+
+> GuitarPro format tablatures are a type of digital music notation that encapsulates information about guitar playing techniques and fingerings. We introduce ShredGP, a GuitarPro tablature generative Transformer-based model conditioned to imitate the style of four distinct iconic electric guitarists. In order to assess the idiosyncrasies of each guitar player, we adopt a computational musicology methodology by analysing features computed from the tokens yielded by the DadaGP encoding scheme. Statistical analyses of the features evidence significant differences between the four guitarists. We trained two variants of the ShredGP model, one using a multi-instrument corpus, the other using solo guitar data. We present a BERT-based model for guitar player classification and use it to evaluate the generated examples. Overall, results from the classifier show that ShredGP is able to generate content congruent with the style of the targeted guitar player. Finally, we reflect on prospective applications for ShredGP for human-AI music interaction. 
+
+### ProgGP: From GuitarPro Tablature Neural Generation To Progressive Metal Production
+
+> Recent work in the field of symbolic music generation has shown value in using a tokenization based on the GuitarPro format, a symbolic representation supporting guitar expressive attributes, as an input and output representation. We extend this work by fine-tuning a pre-trained Transformer model on ProgGP, a custom dataset of 173 progressive metal songs, for the purposes of creating compositions from that genre through a human-AI partnership. Our model is able to generate multiple guitar, bass guitar, drums, piano and orchestral parts. We examine the validity of the generated music using a mixed methods approach by combining quantitative analyses following a computational musicology paradigm and qualitative analyses following a practice-based research paradigm. Finally, we demonstrate the value of the model by using it as a tool to create a progressive metal song, fully produced and mixed by a human metal producer based on AI-generated music. 
+
+### LooperGP: A Loopable Sequence Model for Live Coding Performance using GuitarPro Tablature
+
+> Despite their impressive offline results, deep learning models for symbolic music generation are not widely used in live performances due to a deficit of musically meaningful control parameters and a lack of structured musical form in their outputs. To address these issues we introduce LooperGP, a method for steering a Transformer-XL model towards generating loopable musical phrases of a specified number of bars and time signature, enabling a tool for live coding performances. We show that by training LooperGP on a dataset of 93,681 musical loops extracted from the DadaGP dataset, we are able to steer its generative output towards generating 3x as many loopable phrases as our baseline. In a subjective listening test conducted by 31 participants, LooperGP loops achieved positive median ratings in originality, musical coherence and loop smoothness, demonstrating its potential as a performance tool. 
+
+### GTR-CTRL: Instrument and Genre Conditioning for Guitar-Focused Music Generation with Transformers
+
+> Recently, symbolic music generation with deep learning techniques has witnessed steady improvements. Most works on this topic focus on MIDI representations, but less attention has been paid to symbolic music generation using guitar tablatures (tabs) which can be used to encode multiple instruments. Tabs include information on expressive techniques and fingerings for fretted string instruments in addition to rhythm and pitch. In this work, we use the DadaGP dataset for guitar tab music generation, a corpus of over 26k songs in GuitarPro and token formats. We introduce methods to condition a Transformer-XL deep learning model to generate guitar tabs (GTR-CTRL) based on desired instrumentation (inst-CTRL) and genre (genre-CTRL). Special control tokens are appended at the beginning of each song in the training corpus. We assess the performance of the model with and without conditioning. We propose instrument presence metrics to assess the inst-CTRL model's response to a given instrumentation prompt. We trained a BERT model for downstream genre classification and used it to assess the results obtained with the genre-CTRL model. Statistical analyses evidence significant differences between the conditioned and unconditioned models. Overall, results indicate that the GTR-CTRL methods provide more flexibility and control for guitar-focused symbolic music generation than an unconditioned model. 
 
 ### ERNIE-Music: Text-to-Waveform Music Generation with Diffusion Models
 
