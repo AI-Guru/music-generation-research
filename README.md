@@ -6,14 +6,11 @@
 
 ### Papers: 
 
-- Added: GTR-CTRL: Instrument and Genre Conditioning for Guitar-Focused Music Generation with Transformers
-- Added: Looper: LooperGP: A Loopable Sequence Model for Live Coding Performance using GuitarPro Tablature
-- Added: ProgGP: From GuitarPro Tablature Neural Generation To Progressive Metal Production
-- Added: ShredGP: Guitarist Style-Conditioned Tablature Generation
+- 
 
 ### Datasets:
 
--
+- Added: Chordonomicon
 
 ## Music Modeling Timeline.
 
@@ -320,3 +317,10 @@ Finally, we build a web-based musical Turing test (www.bachbot.com) and evaluate
 - [GitHub](https://github.com/bytedance/GiantMIDI-Piano)
 
 > GiantMIDI-Piano is a classical piano MIDI dataset contains 10,855 MIDI files of 2,786 composers. The curated subset by constraining composer surnames contains 7,236 MIDI files of 1,787 composers. GiantMIDI-Piano are transcribed from live recordings with a high-resolution piano transcription system.
+
+### CHORDONOMICON: A Dataset of 666,000 Songs and their Chord Progressions
+
+- [Paper](https://arxiv.org/html/2410.22046v2)
+- [HuggingFace](https://huggingface.co/datasets/ailsntua/Chordonomicon)
+
+> Chordonomicon is a very large scale dataset featuring the symbolic representation of more than 666,000 contemporary music compositions through the use of music chords and chord progressions. We offer metadata for details such as genre, sub-genre, and release date. Additionally, we include structural information related to different parts of the music piece as well as Spotify IDs.
