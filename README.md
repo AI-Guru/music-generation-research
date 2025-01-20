@@ -1,6 +1,6 @@
 # Music Modeling and Music Generation with Deep Learning.
 
-### Dr. Tristan Behrens, [LinkedIn](https://www.linkedin.com/in/dr-tristan-behrens-734967a2/), September 26th 2023.
+### Dr. Tristan Behrens, [LinkedIn](https://www.linkedin.com/in/dr-tristan-behrens-734967a2/), January 20th 2025.
 
 ## What is new in this version?
 
@@ -10,7 +10,7 @@
 
 ### Datasets:
 
-- Added: Chordonomicon
+- Added: XMIDI Dataset
 
 ## Music Modeling Timeline.
 
@@ -324,3 +324,11 @@ Finally, we build a web-based musical Turing test (www.bachbot.com) and evaluate
 - [HuggingFace](https://huggingface.co/datasets/ailsntua/Chordonomicon)
 
 > Chordonomicon is a very large scale dataset featuring the symbolic representation of more than 666,000 contemporary music compositions through the use of music chords and chord progressions. We offer metadata for details such as genre, sub-genre, and release date. Additionally, we include structural information related to different parts of the music piece as well as Spotify IDs.
+
+### XMIDI Dataset
+
+- [Paper](https://arxiv.org/abs/2501.08809)
+- [GitHub](https://github.com/xmusic-project/XMIDI_Dataset)
+- [Project](https://xmusic-project.github.io/)
+
+> In recent years, remarkable advancements in artificial intelligence-generated content (AIGC) have been achieved in the fields of image synthesis and text generation, generating content comparable to that produced by humans. However, the quality of AI-generated music has not yet reached this standard, primarily due to the challenge of effectively controlling musical emotions and ensuring high-quality outputs. This paper presents a generalized symbolic music generation framework, XMusic, which supports flexible prompts (i.e., images, videos, texts, tags, and humming) to generate emotionally controllable and high-quality symbolic music. XMusic consists of two core components, XProjector and XComposer. XProjector parses the prompts of various modalities into symbolic music elements (i.e., emotions, genres, rhythms and notes) within the projection space to generate matching music. XComposer contains a Generator and a Selector. The Generator generates emotionally controllable and melodious music based on our innovative symbolic music representation, whereas the Selector identifies high-quality symbolic music by constructing a multi-task learning scheme involving quality assessment, emotion recognition, and genre recognition tasks. In addition, we build XMIDI, a large-scale symbolic music dataset that contains 108,023 MIDI files annotated with precise emotion and genre labels. Objective and subjective evaluations show that XMusic significantly outperforms the current state-of-the-art methods with impressive music quality
